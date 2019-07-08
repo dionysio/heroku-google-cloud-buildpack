@@ -34,6 +34,8 @@ echo "-----> Installing the Google Cloud SDK"
 # (google apparently doesn't really know what silent means)
 $BUILD_DIR/vendor/google-cloud-sdk/install.sh -q
 
+export PATH="/app/vendor/google-cloud-sdk/bin:\$PATH"
+
 echo "------> Installing Python client libraries"
 gcloud components install app-engine-python -q
 gcloud components install app-engine-python-extras -q
