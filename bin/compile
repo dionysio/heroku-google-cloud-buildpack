@@ -10,6 +10,7 @@ FILE_NAME="google-cloud-sdk-253.0.0-linux-x86_64.tar.gz"
 
 BUILD_DIR=${1:-}
 CACHE_DIR=${2:-}
+ENV_DIR=${3:-}
 
 echo "-----> Downloading and unpacking the Google Cloud SDK"
 
