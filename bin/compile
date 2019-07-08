@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# bin/compile <build-dir> <cache-dir>
+# bin/compile <build-dir> <cache-dir> <env-dir>
 
 ### Constants
 
@@ -42,43 +42,43 @@ echo "------> Generating our credentials file"
 
 echo -n -e '{\n' > $BUILD_DIR/google-credentials.json
 echo -n -e '  "type": "' >> $BUILD_DIR/google-credentials.json
-echo -n -e "$GOOGLE_TYPE" >> $BUILD_DIR/google-credentials.json
+cat $ENV_DIR/GOOGLE_TYPE >> $BUILD_DIR/google-credentials.json
 echo -n -e '",\n' >> $BUILD_DIR/google-credentials.json
 
 echo -n -e '  "project_id": "' >> $BUILD_DIR/google-credentials.json
-echo -n -e "$GOOGLE_PROJECT_ID" >> $BUILD_DIR/google-credentials.json
+cat $ENV_DIR/GOOGLE_PROJECT_ID >> $BUILD_DIR/google-credentials.json
 echo -n -e '",\n' >> $BUILD_DIR/google-credentials.json
 
 echo -n -e '  "private_key_id": "' >> $BUILD_DIR/google-credentials.json
-echo -n -e "$GOOGLE_PRIVATE_KEY_ID" >> $BUILD_DIR/google-credentials.json
+cat $ENV_DIR/GOOGLE_PRIVATE_KEY_ID >> $BUILD_DIR/google-credentials.json
 echo -n -e '",\n' >> $BUILD_DIR/google-credentials.json
 
 echo -n -e '  "private_key": "' >> $BUILD_DIR/google-credentials.json
-echo -n -e "$GOOGLE_PRIVATE_KEY" >> $BUILD_DIR/google-credentials.json
+cat $ENV_DIR/GOOGLE_PRIVATE_KEY >> $BUILD_DIR/google-credentials.json
 echo -n -e '",\n' >> $BUILD_DIR/google-credentials.json
 
 echo -n -e '  "client_email": "' >> $BUILD_DIR/google-credentials.json
-echo -n -e "$GOOGLE_CLIENT_EMAIL" >> $BUILD_DIR/google-credentials.json
+cat $ENV_DIR/GOOGLE_CLIENT_EMAIL >> $BUILD_DIR/google-credentials.json
 echo -n -e '",\n' >> $BUILD_DIR/google-credentials.json
 
 echo -n -e '  "client_id": "' >> $BUILD_DIR/google-credentials.json
-echo -n -e "$GOOGLE_CLIENT_ID" >> $BUILD_DIR/google-credentials.json
+cat $ENV_DIR/GOOGLE_CLIENT_ID >> $BUILD_DIR/google-credentials.json
 echo -n -e '",\n' >> $BUILD_DIR/google-credentials.json
 
 echo -n -e '  "auth_uri": "' >> $BUILD_DIR/google-credentials.json
-echo -n -e "$GOOGLE_AUTH_URI" >> $BUILD_DIR/google-credentials.json
+cat $ENV_DIR/GOOGLE_AUTH_URI >> $BUILD_DIR/google-credentials.json
 echo -n -e '",\n' >> $BUILD_DIR/google-credentials.json
 
 echo -n -e '  "token_uri": "' >> $BUILD_DIR/google-credentials.json
-echo -n -e "$GOOGLE_TOKEN_URI" >> $BUILD_DIR/google-credentials.json
+cat $ENV_DIR/GOOGLE_TOKEN_URI >> $BUILD_DIR/google-credentials.json
 echo -n -e '",\n' >> $BUILD_DIR/google-credentials.json
 
 echo -n -e '  "auth_provider_x509_cert_url": "' >> $BUILD_DIR/google-credentials.json
-echo -n -e "$GOOGLE_AUTH_PROVIDER_CERT" >> $BUILD_DIR/google-credentials.json
+cat $ENV_DIR/GOOGLE_AUTH_PROVIDER_CERT >> $BUILD_DIR/google-credentials.json
 echo -n -e '",\n' >> $BUILD_DIR/google-credentials.json
 
 echo -n -e '  "client_x509_cert_url": "' >> $BUILD_DIR/google-credentials.json
-echo -n -e "$GOOGLE_CLIENT_CERT" >> $BUILD_DIR/google-credentials.json
+cat $ENV_DIR/GOOGLE_CLIENT_CERT >> $BUILD_DIR/google-credentials.json
 echo -n -e '"\n' >> $BUILD_DIR/google-credentials.json
 
 echo -n -e '}' >> $BUILD_DIR/google-credentials.json
