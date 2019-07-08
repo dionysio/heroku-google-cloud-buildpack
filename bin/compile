@@ -85,7 +85,7 @@ mkdir -p $BUILD_DIR/.profile.d
 cat <<EOF >$BUILD_DIR/.profile.d/heroku-google-cloud.sh
 export PATH="/app/vendor/google-cloud-sdk/bin:\$PATH"
 gcloud auth activate-service-account --key-file /app/google-credentials.json
-
+EOF
 fi
 
 echo "------> Installing Python client libraries"
