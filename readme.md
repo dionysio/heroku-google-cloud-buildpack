@@ -1,6 +1,6 @@
 # heroku google cloud buildpack
 
-This buildpack installs a pinned version of the Google Cloud SDK. During install, it generates a ```google-credentials.json``` file in the build directory, and generates a ```heroku-google-cloud.sh``` script in ```.profile.d``` which activates the Google service account with this credentials file upon server startup.
+This buildpack installs a pinned version (`253.0.0`) of the Google Cloud SDK. During install, it generates a ```google-credentials.json``` file in the build directory, and generates a ```heroku-google-cloud.sh``` script in ```.profile.d``` which activates the Google service account with this credentials file upon server startup.
 
 ## Credentials
 
